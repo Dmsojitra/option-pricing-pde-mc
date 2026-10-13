@@ -1,0 +1,21 @@
+[project]
+name = "option-pricing-numerics"
+version = "1.0.0"
+description = "Option pricing three ways (closed form, Crank-Nicolson PDE, Monte Carlo), American options and Heston calibration"
+authors = [{ name = "Darshit Sojitra" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
